@@ -9,7 +9,7 @@ export default class ScrollView {
     constructor (props: ScrollViewConfig) {
         const { ele } = props
         this.ele = ele
-        this.ele.innerHTML = view(props)
+        this.ele.innerHTML = view()
         this.scrollView = getElementBySelector('.zb-scroll-view') as HTMLElement
         this.scrollContent = getElementBySelector('.zv-scroll-view-content') as HTMLElement
         this.scrollViewAttr = getElementOffset(this.scrollView)

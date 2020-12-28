@@ -1,7 +1,6 @@
 // @ts-ignore
 import Hg from 'hogan.js'
-import { ScrollViewConfig } from './config'
-export const view = (prop: ScrollViewConfig):string => {
+export const view = (data?: string):string => {
     const name = '周看盛'
     const template = `
         <div class="zb-scroll-view">
