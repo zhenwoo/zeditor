@@ -25,9 +25,8 @@ export default {
             insert: false,
             output: 'dist/demo.css'
         }),
-        serve({open: true,host: 'localhost',
-            port: 8086,}), // index.html should be in root of project
-        livereload(),
+        serve({ open: true, host: 'localhost', port: 8086 }), // index.html should be in root of project
+        livereload()
         // cssnano()
     ]
 }
