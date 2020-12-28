@@ -1,13 +1,18 @@
 // @ts-ignore
-import doT from 'dot'
-export const view = ():string => {
+import Hg from 'hogan.js'
+import { ScrollViewConfig } from './config'
+export const view = (prop: ScrollViewConfig):string => {
     const name = '周看盛'
     const template = `
         <div class="zb-scroll-view">
-            <div class="zv-scroll-view-content">{{=it.name}}</div>
-            <div class="zv-scroll-view-scroller-h">淡淡的</div>
-            <div class="zv-scroll-view-scroller-v"></div>
+            <div class="zv-scroll-view-content">{{name}}</div>
+            <div class="zv-scroll-view-scroller-h">
+                <div class="zb-scroll-view-bar"></div>
+            </div>
+            <div class="zv-scroll-view-scroller-v">
+                <div class="zb-scroll-view-bar"></div>
+            </div>
         </div>
     `
-    return doT.template(template)({ name })
+    return Hg.compile(template).render({ name })
 }
