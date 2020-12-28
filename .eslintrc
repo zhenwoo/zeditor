@@ -1,0 +1,18 @@
+{
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "globals": {
+    "appTool": true,
+    "require": true,
+    "$": true,
+    "ant": true
+  },
+  "extends": "standard",
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "prettier"],
+  "rules": {
+    "indent": ["error", 4]
+  }
+}
